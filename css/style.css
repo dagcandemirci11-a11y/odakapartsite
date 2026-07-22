@@ -596,6 +596,12 @@ p { color: var(--color-text-muted); }
   outline: none;
 }
 
+/* Tarih alanı boşken görünen "gg.aa.yyyy" metni her tarayıcıda net dursun */
+.booking-field input::placeholder {
+  color: var(--color-navy);
+  opacity: 0.75;
+}
+
 /* Tarih alanı boşken "gg.aa.yyyy" metni görünür kalsın (appearance:none
    Chromium'da bu metni gizliyordu — bu yüzden SADECE select'e uyguluyoruz) */
 .booking-field input[type="date"]::-webkit-datetime-edit {

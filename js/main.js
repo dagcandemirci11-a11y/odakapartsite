@@ -48,6 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const todayStr = new Date().toISOString().split('T')[0];
     checkinInput.min = todayStr;
 
+    // Tarih alanları boşken "gg.aa.yyyy" metnini her tarayıcıda göstermek için
+    // metin kutusu olarak başlar, odaklanınca tarih seçiciye dönüşürler.
+    [checkinInput, checkoutInput].forEach((inp) => {
+      inp.addEventListener('focus', () => {
+        if (inp.type === 'text') {
+          inp.type = 'date';
+          if (typeof inp.showPicker === 'function') {
+            try { inp.showPicker(); } catch (e) { /* kullanıcı yine de takvim ikonuna tıklayabilir */ }
+          }
+        }
+      });
+      inp.addEventListener('blur', () => {
+        if (!inp.value) inp.type = 'text';
+      });
+    });
+
     checkinInput.addEventListener('change', () => {
       const nextDay = new Date(checkinInput.value);
       nextDay.setDate(nextDay.getDate() + 1);
