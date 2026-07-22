@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="1+0 stüdyo daire örnek görseli">
+  <defs>
+    <linearGradient id="tWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7eede"/><stop offset="1" stop-color="#ecdcc2"/>
+    </linearGradient>
+    <linearGradient id="tWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9a678"/><stop offset="1" stop-color="#a97a50"/>
+    </linearGradient>
+    <linearGradient id="tSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe6ea"/><stop offset="1" stop-color="#eaf3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#tWall)"/>
+  <rect x="0" y="480" width="800" height="120" fill="#d6bf9c"/>
+  <!-- Mutfak tezgahı -->
+  <rect x="60" y="330" width="300" height="150" fill="url(#tWood)"/>
+  <rect x="60" y="322" width="300" height="18" fill="#45413c"/>
+  <rect x="60" y="200" width="300" height="90" fill="#b98552"/>
+  <line x1="135" y1="200" x2="135" y2="290" stroke="#8a6440" stroke-width="4"/>
+  <line x1="210" y1="200" x2="210" y2="290" stroke="#8a6440" stroke-width="4"/>
+  <line x1="285" y1="200" x2="285" y2="290" stroke="#8a6440" stroke-width="4"/>
+  <!-- Ocak -->
+  <circle cx="120" cy="322" r="14" fill="#1c2b3a"/>
+  <circle cx="170" cy="322" r="14" fill="#1c2b3a"/>
+  <!-- Yatak -->
+  <rect x="440" y="330" width="300" height="150" rx="10" fill="url(#tWood)"/>
+  <rect x="440" y="300" width="300" height="70" rx="10" fill="#f3ead9"/>
+  <rect x="456" y="316" width="126" height="46" rx="8" fill="#e2d3ba"/>
+  <rect x="598" y="316" width="126" height="46" rx="8" fill="#e2d3ba"/>
+  <rect x="440" y="360" width="300" height="28" fill="#2c4256"/>
+  <!-- Pencere -->
+  <rect x="470" y="90" width="230" height="150" rx="6" fill="#7c5030"/>
+  <rect x="483" y="103" width="204" height="124" fill="url(#tSky)"/>
+  <circle cx="655" cy="135" r="22" fill="#f6e2a8"/>
+  <line x1="585" y1="103" x2="585" y2="227" stroke="#7c5030" stroke-width="7"/>
+  <line x1="483" y1="165" x2="687" y2="165" stroke="#7c5030" stroke-width="7"/>
+  <!-- Bitki -->
+  <rect x="380" y="420" width="40" height="60" rx="6" fill="#9c6f47"/>
+  <path d="M400 420 q-26-42 -10-80 q22 30 10 80 q26-38 42-70 q-4 40 -42 70z" fill="#6f9a58"/>
+  <text x="400" y="565" font-family="Montserrat, sans-serif" font-size="22" font-weight="600" fill="#7c5030" text-anchor="middle" opacity="0.55">Örnek Görsel · 1+0 Stüdyo</text>
+</svg>

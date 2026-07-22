@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odak Apart Otel | İkinci Eviniz — Ayvalık Altınova</title>
+<meta name="description" content="Ayvalık Altınova'da deniz kenarına 400 metre, aile sıcaklığında bir apart otel. Odak Apart Otel — İkinci Eviniz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body>
+
+<!-- ========== HEADER & NAVİGASYON ========== -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+
+    <a href="#hero" class="logo">
+      <span class="logo-mark">OA</span>
+      <span class="logo-text">
+        <span class="name">Odak Apart Otel</span>
+        <span class="tagline">İkinci Eviniz</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-links">
+        <li><a href="#daireler" class="nav-link">Daireler</a></li>
+        <li><a href="#hizmetler" class="nav-link">Hizmetler</a></li>
+        <li><a href="#konum" class="nav-link">Konum</a></li>
+        <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="tel:+905307207171" class="header-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0530 720 71 71
+        </a>
+        <a href="#booking-bar" class="btn btn-primary">Hemen Rezerve Et</a>
+      </div>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ========== HERO SECTION ========== -->
+<main>
+  <section id="hero" class="hero">
+
+    <!-- Arka plan: Gerçek otel fotoğrafı geldiğinde .hero-media için
+         CSS'te "background-image: url('../assets/images/hero.jpg')" satırını eklemeniz yeterli. -->
+    <div class="hero-media" aria-hidden="true">
+      <div class="hero-media-overlay"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow eyebrow-light">Ayvalık · Altınova · Denize 400 Metre</span>
+        <h1 class="hero-title">Odak Apart Otel<br><span>İkinci Eviniz</span></h1>
+        <p class="hero-lead">Aile sıcaklığında, nezih ve huzurlu bir tatil deneyimi sizi bekliyor. Bahçeli dairelerimiz, tatlı terasımız ve samimi ev konforuyla &ldquo;ikinci eviniz&rdquo; olmak için buradayız.</p>
+
+        <div class="hero-cta-group">
+          <a href="#booking-bar" class="btn btn-primary btn-lg">Hemen Rezerve Et</a>
+          <a href="#daireler" class="btn btn-outline-light btn-lg">Daireleri Keşfet</a>
+        </div>
+
+        <ul class="hero-stats">
+          <li><strong>27</strong><span>Oda</span></li>
+          <li><strong>400 m</strong><span>Denize Mesafe</span></li>
+          <li><strong>30+ Yıl</strong><span>Aile İşletmesi Tecrübesi</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Booking Bar -->
+    <div class="booking-bar-wrap" id="booking-bar">
+      <form class="booking-bar" id="bookingBar">
+        <div class="booking-field">
+          <label for="checkin">Giriş Tarihi</label>
+          <input type="date" id="checkin" name="checkin" required>
+        </div>
+        <div class="booking-divider" aria-hidden="true"></div>
+        <div class="booking-field">
+          <label for="checkout">Çıkış Tarihi</label>
+          <input type="date" id="checkout" name="checkout" required>
+        </div>
+        <div class="booking-divider" aria-hidden="true"></div>
+        <div class="booking-field">
+          <label for="guests">Kişi Sayısı</label>
+          <select id="guests" name="guests">
+            <option value="1">1 Misafir</option>
+            <option value="2" selected>2 Misafir</option>
+            <option value="3">3 Misafir</option>
+            <option value="4">4 Misafir</option>
+            <option value="5">5+ Misafir</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary booking-submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          Müsaitlik Sorgula
+        </button>
+      </form>
+    </div>
+
+    <a href="#daireler" class="scroll-indicator" aria-label="Aşağı kaydır"><span></span></a>
+  </section>
+
+  <!-- ========== DAİRE TÜRLERİ ========== -->
+  <section id="daireler" class="section section-rooms">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Dairelerimiz</span>
+        <h2>Size Uygun Daireyi Seçin</h2>
+        <p>Zemin kattan çatı katına, bahçeli seçeneklerden kompakt stüdyolara kadar toplam 27 odamızla ailelere, çiftlere ve öğrencilere ev konforunda konaklama sunuyoruz.</p>
+      </div>
+
+      <!-- Zemin Kat -->
+      <h3 class="rooms-floor-title"><span>Zemin Kat</span></h3>
+      <div class="rooms-grid">
+
+        <!-- Bahçeli Zemin Kat 1+1 (3) -->
+        <article class="room-card room-card-featured">
+          <div class="room-media">
+            <img src="assets/images/room-garden.svg" alt="Bahçeli zemin kat 1+1 daire">
+            <span class="room-badge">En Popüler</span>
+          </div>
+          <div class="room-body">
+            <div class="room-head">
+              <h3>Bahçeli 1+1</h3>
+              <span class="room-count">3 Daire</span>
+            </div>
+            <p class="room-desc">Kendine ait bahçe erişimiyle, aileler için en ferah seçenek. Ayrı yatak odası ve salonuyla evinizdeki gibi.</p>
+            <ul class="room-specs">
+              <li>🌿 Özel Bahçe</li>
+              <li>👥 2–4 Kişi</li>
+              <li>🛏️ 1+1 (Ayrı Oda)</li>
+              <li>🏠 Zemin Kat</li>
+            </ul>
+            <div class="room-amenities">
+              <span>Klima</span><span>Televizyon</span><span>Ocak</span><span>Mutfak</span>
+            </div>
+            <div class="room-footer">
+              <a href="#booking-bar" class="btn btn-primary btn-sm">Rezerve Et</a>
+              <a href="#iletisim" class="room-link">Bilgi Al →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Zemin Kat 1+1 (2) -->
+        <article class="room-card">
+          <div class="room-media">
+            <img src="assets/images/room-suite.svg" alt="Zemin kat 1+1 daire">
+          </div>
+          <div class="room-body">
+            <div class="room-head">
+              <h3>Zemin Kat 1+1</h3>
+              <span class="room-count">2 Daire</span>
+            </div>
+            <p class="room-desc">Ayrı yatak odası ve salonu olan konforlu daire. Çiftler ve küçük aileler için ideal.</p>
+            <ul class="room-specs">
+              <li>👥 2–3 Kişi</li>
+              <li>🛏️ 1+1 (Ayrı Oda)</li>
+              <li>🏠 Zemin Kat</li>
+              <li>🚶 Kolay Erişim</li>
+            </ul>
+            <div class="room-amenities">
+              <span>Klima</span><span>Televizyon</span><span>Ocak</span><span>Mutfak</span>
+            </div>
+            <div class="room-footer">
+              <a href="#booking-bar" class="btn btn-primary btn-sm">Rezerve Et</a>
+              <a href="#iletisim" class="room-link">Bilgi Al →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Zemin Kat 1+0 (2) -->
+        <article class="room-card">
+          <div class="room-media">
+            <img src="assets/images/room-studio.svg" alt="Zemin kat 1+0 stüdyo daire">
+          </div>
+          <div class="room-body">
+            <div class="room-head">
+              <h3>Zemin Kat 1+0</h3>
+              <span class="room-count">2 Daire</span>
+            </div>
+            <p class="room-desc">Kompakt ve pratik stüdyo daire. Merdiven derdi olmadan, zemin kat rahatlığında konaklama.</p>
+            <ul class="room-specs">
+              <li>👥 1–2 Kişi</li>
+              <li>🛏️ 1+0 (Stüdyo)</li>
+              <li>🏠 Zemin Kat</li>
+              <li>💡 Ekonomik</li>
+            </ul>
+            <div class="room-amenities">
+              <span>Klima</span><span>Televizyon</span><span>Ocak</span><span>Mutfak</span>
+            </div>
+            <div class="room-footer">
+              <a href="#booking-bar" class="btn btn-primary btn-sm">Rezerve Et</a>
+              <a href="#iletisim" class="room-link">Bilgi Al →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- 1. Kat -->
+      <h3 class="rooms-floor-title"><span>1. Kat</span></h3>
+      <div class="rooms-grid">
+
+        <!-- 1. Kat 1+1 Balkonlu (6) -->
+        <article class="room-card">
+          <div class="room-media">
+            <img src="assets/images/room-suite.svg" alt="Birinci kat 1+1 balkonlu daire">
+            <span class="room-badge room-badge-wood">Balkonlu</span>
+          </div>
+          <div class="room-body">
+            <div class="room-head">
+              <h3>1. Kat 1+1 Balkonlu</h3>
+              <span class="room-count">6 Daire</span>
+            </div>
+            <p class="room-desc">Balkonuyla ferah, ayrı yatak odalı daire. Aileler için en çok tercih edilen seçeneklerimizden.</p>
+            <ul class="room-specs">
+              <li>🌅 Balkonlu</li>
+              <li>👥 2–4 Kişi</li>
+              <li>🛏️ 1+1 (Ayrı Oda)</li>
+              <li>🏢 1. Kat</li>
+            </ul>
+            <div class="room-amenities">
+              <span>Klima</span><span>Televizyon</span><span>Ocak</span><span>Mutfak</span><span>Balkon</span>
+            </div>
+            <div class="room-footer">
+              <a href="#booking-bar" class="btn btn-primary btn-sm">Rezerve Et</a>
+              <a href="#iletisim" class="room-link">Bilgi Al →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 1. Kat 1+1 Balkonsuz (2) -->
+        <article class="room-card">
+          <div class="room-media">
+            <img src="assets/images/room-suite.svg" alt="Birinci kat 1+1 balkonsuz daire">
+          </div>
+          <div class="room-body">
+            <div class="room-head">
+              <h3>1. Kat 1+1</h3>
+              <span class="room-count">2 Daire</span>
+            </div>
+            <p class="room-desc">Birinci katta, ayrı yatak odalı sakin daire. Huzurlu bir konaklama arayanlar için ideal.</p>
+            <ul class="room-specs">
+              <li>👥 2–4 Kişi</li>
+              <li>🛏️ 1+1 (Ayrı Oda)</li>
+              <li>🏢 1. Kat</li>
+              <li>🤫 Sakin Konum</li>
+            </ul>
+            <div class="room-amenities">
+              <span>Klima</span><span>Televizyon</span><span>Ocak</span><span>Mutfak</span>
+            </div>
+            <div class="room-footer">
+              <a href="#booking-bar" class="btn btn-primary btn-sm">Rezerve Et</a>
+              <a href="#iletisim" class="room-link">Bilgi Al →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 1. Kat 1+0 Balkonsuz (2) -->
+        <article class="room-card">
+          <div class="room-media">
+            <img src="assets/images/room-studio.svg" alt="Birinci kat 1+0 stüdyo daire">
+          </div>
+          <div class="room-body">
+            <div class="room-head">
+              <h3>1. Kat 1+0</h3>
+              <span class="room-count">2 Daire</span>
+            </div>
+            <p class="room-desc">Birinci katta kompakt stüdyo daire. Öğrenciler ve tek/çift konaklamalar için uygun.</p>
+            <ul class="room-specs">
+              <li>👥 1–2 Kişi</li>
+              <li>🛏️ 1+0 (Stüdyo)</li>
+              <li>🏢 1. Kat</li>
+              <li>💡 Ekonomik</li>
+            </ul>
+            <div class="room-amenities">
+              <span>Klima</span><span>Televizyon</span><span>Ocak</span><span>Mutfak</span>
+            </div>
+            <div class="room-footer">
+              <a href="#booking-bar" class="btn btn-primary btn-sm">Rezerve Et</a>
+              <a href="#iletisim" class="room-link">Bilgi Al →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- 2. Kat -->
+      <h3 class="rooms-floor-title"><span>2. Kat</span></h3>
+      <div class="rooms-grid">
+
+        <!-- 2. Kat 1+1 Balkonlu (6) -->
+        <article class="room-card">
+          <div class="room-media">
+            <img src="assets/images/room-suite.svg" alt="İkinci kat 1+1 balkonlu daire">
+            <span class="room-badge room-badge-wood">Manzaralı</span>
+          </div>
+          <div class="room-body">
+            <div class="room-head">
+              <h3>2. Kat 1+1 Balkonlu</h3>
+              <span class="room-count">6 Daire</span>
+            </div>
+            <p class="room-desc">En üst katta, balkonlu ve bol ışıklı geniş daire. Manzara sevenler için birebir seçenek.</p>
+            <ul class="room-specs">
+              <li>☀️ Balkon &amp; Manzara</li>
+              <li>👥 2–4 Kişi</li>
+              <li>🛏️ 1+1 (Ayrı Oda)</li>
+              <li>🏢 2. Kat</li>
+            </ul>
+            <div class="room-amenities">
+              <span>Klima</span><span>Televizyon</span><span>Ocak</span><span>Mutfak</span><span>Balkon</span>
+            </div>
+            <div class="room-footer">
+              <a href="#booking-bar" class="btn btn-primary btn-sm">Rezerve Et</a>
+              <a href="#iletisim" class="room-link">Bilgi Al →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Kat 1+1 Balkonsuz (2) -->
+        <article class="room-card">
+          <div class="room-media">
+            <img src="assets/images/room-suite.svg" alt="İkinci kat 1+1 balkonsuz daire">
+          </div>
+          <div class="room-body">
+            <div class="room-head">
+              <h3>2. Kat 1+1</h3>
+              <span class="room-count">2 Daire</span>
+            </div>
+            <p class="room-desc">İkinci katta, ayrı yatak odalı ferah daire. Mahremiyet ve sessizlik önceliğiniz ise ideal.</p>
+            <ul class="room-specs">
+              <li>👥 2–4 Kişi</li>
+              <li>🛏️ 1+1 (Ayrı Oda)</li>
+              <li>🏢 2. Kat</li>
+              <li>🤫 Sakin &amp; Ferah</li>
+            </ul>
+            <div class="room-amenities">
+              <span>Klima</span><span>Televizyon</span><span>Ocak</span><span>Mutfak</span>
+            </div>
+            <div class="room-footer">
+              <a href="#booking-bar" class="btn btn-primary btn-sm">Rezerve Et</a>
+              <a href="#iletisim" class="room-link">Bilgi Al →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Kat 1+0 Balkonsuz (2) -->
+        <article class="room-card">
+          <div class="room-media">
+            <img src="assets/images/room-studio.svg" alt="İkinci kat 1+0 stüdyo daire">
+          </div>
+          <div class="room-body">
+            <div class="room-head">
+              <h3>2. Kat 1+0</h3>
+              <span class="room-count">2 Daire</span>
+            </div>
+            <p class="room-desc">En üst katta, bol ışıklı kompakt stüdyo. Ekonomik ve pratik konaklama arayanlar için.</p>
+            <ul class="room-specs">
+              <li>👥 1–2 Kişi</li>
+              <li>🛏️ 1+0 (Stüdyo)</li>
+              <li>🏢 2. Kat</li>
+              <li>☀️ Bol Işık</li>
+            </ul>
+            <div class="room-amenities">
+              <span>Klima</span><span>Televizyon</span><span>Ocak</span><span>Mutfak</span>
+            </div>
+            <div class="room-footer">
+              <a href="#booking-bar" class="btn btn-primary btn-sm">Rezerve Et</a>
+              <a href="#iletisim" class="room-link">Bilgi Al →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Tüm dairelerde ortak olanaklar şeridi -->
+      <div class="rooms-info-band">
+        <div class="rooms-info-head">
+          <h3>Tüm Dairelerimizde</h3>
+          <p>27 dairemizin tamamında standart olarak sunduğumuz konforlar.</p>
+        </div>
+        <ul class="rooms-info-list">
+          <li>✓ Tam donanımlı mutfak &amp; ocak</li>
+          <li>✓ Klima &amp; televizyon</li>
+          <li>✓ Ücretsiz Wi-Fi</li>
+          <li>✓ Çatıda ortak çamaşır makinesi</li>
+          <li>✓ Bahçe, teras &amp; masa tenisi</li>
+          <li>✓ Denize sadece 400 metre</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== OLANAKLAR (Amenities) ========== -->
+  <section id="hizmetler" class="section section-amenities">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Olanaklar &amp; Hizmetler</span>
+        <h2>Evinizdeki Konfor, Tatilin Huzuru</h2>
+        <p>Kendinizi evinizde hissetmeniz için ihtiyacınız olan her şey burada. Aile işletmesi titizliğiyle hazırladık.</p>
+      </div>
+
+      <div class="amenities-grid">
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <h3>Hızlı Wi-Fi</h3>
+          <p>Tüm dairelerde ve ortak alanlarda ücretsiz, kesintisiz internet.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
+          </div>
+          <h3>Tam Donanımlı Mutfak</h3>
+          <p>Ocak ve tüm mutfak malzemeleriyle dilediğiniz gibi yemeğinizi hazırlayın.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>7/24 Resepsiyon</h3>
+          <p>İhtiyacınız olan her an, güler yüzlü ekibimiz yanınızda.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/><path d="M9 12h.01M13 12h.01"/></svg>
+          </div>
+          <h3>Temizlik Hizmeti</h3>
+          <p>Düzenli temizlik ile daireniz her zaman ferah ve tertemiz.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="1.5"/><line x1="8" y1="6" x2="8" y2="6"/><line x1="12" y1="6" x2="12" y2="6"/></svg>
+          </div>
+          <h3>Çatıda Çamaşır Makinesi</h3>
+          <p>Ortak kullanıma açık çamaşır makinesiyle uzun konaklamalarda rahatlık.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22a8 8 0 0 1 8-8 8 8 0 0 1 8 8"/><circle cx="10" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+          </div>
+          <h3>Klima &amp; Televizyon</h3>
+          <p>Her dairede klima ve televizyon; sıcak yaz günlerinde serin konfor.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9Z"/><path d="M12 22c-4.97 0-9-4.03-9-9 4.97 0 9 4.03 9 9Z"/><path d="M12 22V8"/><path d="M12 8a4 4 0 1 0 0-6 4 4 0 0 0 0 6Z"/></svg>
+          </div>
+          <h3>Bahçe &amp; Masa Tenisi</h3>
+          <p>Zemin katta tatlı bir bahçe ve masa tenisiyle keyifli vakit geçirin.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/><circle cx="12" cy="9" r="1"/></svg>
+          </div>
+          <h3>Manzaralı Teras</h3>
+          <p>Tatlı manzaralı terasımızda çayınızı yudumlayın, huzuru hissedin.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KONUM & HARİTA ========== -->
+  <section id="konum" class="section section-location">
+    <div class="container">
+      <div class="location-layout">
+
+        <div class="location-info">
+          <span class="eyebrow">Konum &amp; Ulaşım</span>
+          <h2>Denize 400 Metre, Her Yere Yakın</h2>
+          <p class="location-lead">Ayvalık Altınova'nın huzurlu atmosferinde, plaja yürüme mesafesinde. Bölgenin en güzel noktalarına kısa sürede ulaşın.</p>
+
+          <ul class="distance-list">
+            <li>
+              <span class="distance-icon">🏖️</span>
+              <div>
+                <strong>Denize 400 metre</strong>
+                <span>Yürüyerek yaklaşık 5 dakika</span>
+              </div>
+            </li>
+            <li>
+              <span class="distance-icon">🌊</span>
+              <div>
+                <strong>Sarımsaklı Plajı — 15 dakika</strong>
+                <span>Bölgenin ünlü uzun kumsalı</span>
+              </div>
+            </li>
+            <li>
+              <span class="distance-icon">⛴️</span>
+              <div>
+                <strong>Cunda Adası — 40 dakika</strong>
+                <span>Tarihi sokaklar ve balık restoranları</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="location-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>Adresimiz</strong>
+              <p>Altınova Mah. Anafartalar Cad. No:136<br>Ayvalık / Balıkesir</p>
+            </div>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Alt%C4%B1nova+Mah.+Anafartalar+Cad.+No%3A136+Ayval%C4%B1k+Bal%C4%B1kesir" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Yol Tarifi Al →</a>
+        </div>
+
+        <div class="location-map">
+          <iframe
+            title="Odak Apart Otel Konumu"
+            src="https://maps.google.com/maps?q=Alt%C4%B1nova%20Mah.%20Anafartalar%20Cad.%20No%3A136%20Ayval%C4%B1k%20Bal%C4%B1kesir&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== YORUMLAR (Reviews) ========== -->
+  <!-- Gerçek Google yorumları; yazım/imla düzeltilerek eklenmiştir. -->
+  <section id="yorumlar" class="section section-reviews">
+    <div class="container">
+      <div class="reviews-top">
+        <div class="section-header reviews-header">
+          <span class="eyebrow">Misafir Yorumları</span>
+          <h2>Misafirlerimiz Ne Diyor?</h2>
+          <p>İkinci evini bizde bulan misafirlerimizin samimi yorumları.</p>
+        </div>
+
+        <div class="rating-badge">
+          <div class="rating-score">
+            <strong>4.2</strong>
+            <span class="stars" aria-label="5 üzerinden 4.2 puan">★★★★<span class="star-empty">★</span></span>
+          </div>
+          <div class="rating-meta">
+            <span class="rating-source">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-2 3.2-4.8 3.2-7.9z"/><path fill="#34A853" d="M12 23c2.9 0 5.4-1 7.2-2.6l-3.6-2.7c-1 .7-2.3 1.1-3.6 1.1-2.8 0-5.1-1.9-6-4.4H2.3v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M6 14.4a6.6 6.6 0 0 1 0-4.2V7.4H2.3a11 11 0 0 0 0 9.8L6 14.4z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .5 4.1 1.6l3.1-3.1A11 11 0 0 0 2.3 7.4L6 10.2c.9-2.6 3.2-4.4 6-4.4z"/></svg>
+              Google Puanı
+            </span>
+            <span class="rating-count">Misafir değerlendirmelerine göre</span>
+            <a href="https://share.google/iLLdzdgHz4uNUs3mz" target="_blank" rel="noopener" class="rating-link">Tüm yorumları oku →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+
+        <article class="review-card" data-review>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">&ldquo;Odak Apart Otel, memnun kaldığımız bir mola yeri oldu. Konumu, temiz oluşu, merkeze yakınlığı, alışverişe yakınlığı, sahile yakınlığı; mola vermek için nedenleriniz arasında olacaklar. Keyifli tatilleriniz olsun.&rdquo;</p>
+          <div class="review-author">
+            <span class="review-avatar">MA</span>
+            <div>
+              <strong>Mehmet Aydın</strong>
+              <span>Google Yorumu</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card" data-review>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">&ldquo;Özgür abi ve eşine ilgi ve alakalarından dolayı çok teşekkür ederiz. Eşimle tavsiye üzerine geldik, gelmeden önce de aradık; bu kadar iyi olabileceğini beklemiyorduk. Her yer size ait, sanki kendi evinizdesiniz. Sloganları da bu zaten: İkinci Eviniz. Sözün hakkını veriyor.&rdquo;</p>
+          <div class="review-author">
+            <span class="review-avatar">EK</span>
+            <div>
+              <strong>Emre Kaya</strong>
+              <span>Google Yorumu</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card" data-review>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">&ldquo;Odak Apart Otel'e giriş yaptığımız andan itibaren güler yüzle bir karşılama, yardımcı olmaları, odaların temizliği, terası, bahçesi, denize yakınlığı ile ailecek rahat bir tatil yapacağınız çok güzel bir ortam. Ayrıca oda anahtarınızın üzerinde &lsquo;İkinci Eviniz&rsquo; yazıyor, gerçekten öyle. Bir daha mı? Evet, daima evet! Tatile gideceklere şimdiden iyi tatiller. Bizimle ilgilenen Özgür Bey ve Serpil Hanım'a teşekkür ederiz.&rdquo;</p>
+          <div class="review-author">
+            <span class="review-avatar">ED</span>
+            <div>
+              <strong>Elif Demir</strong>
+              <span>Google Yorumu</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card" data-review>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">&ldquo;Yine Odak, yeniden Odak. 4. kez tercih ettiğimiz ve her seferinde çok eğlendiğimiz, ruhumuzu dinlendirdiğimiz ve evimizdeymiş gibi hissettiğimiz sıcacık apart otelimiz. Gerçekten de ikinci evimiz oldu burası. Denize yakınlığı, odaların rahatlığı, ihtiyaç duyduğunuz her şeyin elinizin altında oluşuyla vazgeçemediğimiz mekânımız. Tekrar görüşmek üzere.&rdquo;</p>
+          <div class="review-author">
+            <span class="review-avatar">ZŞ</span>
+            <div>
+              <strong>Zeynep Şahin</strong>
+              <span>Google Yorumu</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========== İLETİŞİM & FOOTER ========== -->
+<footer id="iletisim" class="site-footer">
+
+  <!-- İletişim CTA şeridi -->
+  <div class="footer-cta">
+    <div class="container footer-cta-inner">
+      <div>
+        <h2>İkinci Evinize Bekliyoruz</h2>
+        <p>Rezervasyon ve sorularınız için bize ulaşın, memnuniyetle yardımcı olalım.</p>
+      </div>
+      <div class="footer-cta-actions">
+        <a href="tel:+905307207171" class="btn btn-primary btn-lg">0530 720 71 71</a>
+        <a href="https://wa.me/905307207171" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg">WhatsApp'tan Yaz</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-main">
+
+    <div class="footer-col footer-brand">
+      <a href="#hero" class="logo">
+        <span class="logo-mark">OA</span>
+        <span class="logo-text">
+          <span class="name" style="color:var(--color-text-inverse)">Odak Apart Otel</span>
+          <span class="tagline">İkinci Eviniz</span>
+        </span>
+      </a>
+      <p>Ayvalık Altınova'da, denize 400 metre mesafede, aile sıcaklığında nezih ve huzurlu bir konaklama deneyimi.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram" title="Instagram linkinizi ekleyin">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" title="Facebook linkinizi ekleyin">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://wa.me/905307207171" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Keşfet</h4>
+      <ul class="footer-links">
+        <li><a href="#daireler">Daireler</a></li>
+        <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#konum">Konum</a></li>
+        <li><a href="#yorumlar">Yorumlar</a></li>
+        <li><a href="#booking-bar">Rezervasyon</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>İletişim</h4>
+      <ul class="footer-contact">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Altınova Mah. Anafartalar Cad. No:136<br>Ayvalık / Balıkesir</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><a href="tel:+905307207171">0530 720 71 71</a><br><a href="tel:+902663487272">0266 348 72 72</a></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Konum</h4>
+      <p class="footer-note">Denize 400 m · Sarımsaklı 15 dk · Cunda 40 dk</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Alt%C4%B1nova+Mah.+Anafartalar+Cad.+No%3A136+Ayval%C4%B1k+Bal%C4%B1kesir" target="_blank" rel="noopener" class="footer-map-link">Haritada Aç →</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© <span id="year"></span> Odak Apart Otel. Tüm hakları saklıdır.</p>
+      <ul class="footer-legal">
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Koşulları</a></li>
+        <li><a href="#">KVKK</a></li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

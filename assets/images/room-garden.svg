@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Bahçeli zemin kat dairesi örnek görseli">
+  <defs>
+    <linearGradient id="gWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6ecdb"/><stop offset="1" stop-color="#ecdcc2"/>
+    </linearGradient>
+    <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe0e6"/><stop offset="1" stop-color="#e6f2e6"/>
+    </linearGradient>
+    <linearGradient id="gWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9a678"/><stop offset="1" stop-color="#a97a50"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#gWall)"/>
+  <rect x="0" y="470" width="800" height="130" fill="#d8c2a0"/>
+  <!-- Pencere / bahçe manzarası -->
+  <rect x="60" y="70" width="360" height="300" rx="6" fill="#7c5030"/>
+  <rect x="74" y="84" width="332" height="272" fill="url(#gSky)"/>
+  <circle cx="360" cy="140" r="34" fill="#f6e2a8"/>
+  <path d="M74 300 q60-70 140-40 q70-60 160-10 l0 106 -300 0 z" fill="#8fb87a"/>
+  <path d="M110 356 l0-60 m0 20 l-16-16 m16 0 l16-16" stroke="#5f7d4a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="110" cy="290" r="18" fill="#6f9a58"/>
+  <line x1="240" y1="84" x2="240" y2="356" stroke="#7c5030" stroke-width="8"/>
+  <line x1="74" y1="220" x2="406" y2="220" stroke="#7c5030" stroke-width="8"/>
+  <!-- Yatak -->
+  <rect x="470" y="300" width="290" height="150" rx="10" fill="url(#gWood)"/>
+  <rect x="470" y="270" width="290" height="70" rx="10" fill="#f3ead9"/>
+  <rect x="486" y="286" width="120" height="46" rx="8" fill="#e2d3ba"/>
+  <rect x="624" y="286" width="120" height="46" rx="8" fill="#e2d3ba"/>
+  <rect x="470" y="330" width="290" height="30" fill="#1c2b3a" opacity="0.85"/>
+  <!-- Komodin + lamba -->
+  <rect x="410" y="360" width="60" height="90" fill="#a97a50"/>
+  <rect x="430" y="330" width="20" height="30" fill="#45413c"/>
+  <path d="M415 330 h50 l-10-26 h-30 z" fill="#f6e2a8"/>
+  <!-- Bitki -->
+  <rect x="700" y="410" width="46" height="60" rx="6" fill="#b98552"/>
+  <path d="M723 410 q-30-40 -14-80 q26 30 14 80 q30-40 46-70 q-6 40 -46 70z" fill="#6f9a58"/>
+  <text x="400" y="560" font-family="Montserrat, sans-serif" font-size="22" font-weight="600" fill="#7c5030" text-anchor="middle" opacity="0.55">Örnek Görsel · Bahçeli Daire</text>
+</svg>

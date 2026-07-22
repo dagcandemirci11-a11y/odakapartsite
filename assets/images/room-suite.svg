@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="1+1 daire örnek görseli">
+  <defs>
+    <linearGradient id="sWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7eede"/><stop offset="1" stop-color="#ead9bf"/>
+    </linearGradient>
+    <linearGradient id="sWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9a678"/><stop offset="1" stop-color="#9c6f47"/>
+    </linearGradient>
+    <linearGradient id="sSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe6ea"/><stop offset="1" stop-color="#eaf3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sWall)"/>
+  <rect x="0" y="480" width="800" height="120" fill="#d6bf9c"/>
+  <!-- Oturma: kanepe -->
+  <rect x="70" y="330" width="300" height="120" rx="16" fill="url(#sWood)"/>
+  <rect x="70" y="300" width="300" height="70" rx="16" fill="#2c4256"/>
+  <rect x="86" y="316" width="80" height="54" rx="10" fill="#3a5670"/>
+  <rect x="180" y="316" width="80" height="54" rx="10" fill="#3a5670"/>
+  <rect x="274" y="316" width="80" height="54" rx="10" fill="#3a5670"/>
+  <rect x="60" y="330" width="24" height="120" rx="8" fill="#8a6440"/>
+  <rect x="356" y="330" width="24" height="120" rx="8" fill="#8a6440"/>
+  <!-- Sehpa -->
+  <rect x="150" y="470" width="140" height="20" rx="6" fill="#7c5030"/>
+  <rect x="160" y="490" width="10" height="30" fill="#7c5030"/>
+  <rect x="270" y="490" width="10" height="30" fill="#7c5030"/>
+  <!-- Pencere -->
+  <rect x="470" y="90" width="270" height="230" rx="6" fill="#7c5030"/>
+  <rect x="484" y="104" width="242" height="202" fill="url(#sSky)"/>
+  <circle cx="690" cy="150" r="26" fill="#f6e2a8"/>
+  <path d="M484 250 q70-30 130 0 q60-24 112 0 l0 56 -242 0z" fill="#9cc0d6"/>
+  <line x1="605" y1="104" x2="605" y2="306" stroke="#7c5030" stroke-width="7"/>
+  <!-- Sarkıt lamba -->
+  <line x1="330" y1="60" x2="330" y2="120" stroke="#45413c" stroke-width="3"/>
+  <path d="M305 120 h50 l-12 34 h-26z" fill="#c9a678"/>
+  <!-- Bitki -->
+  <rect x="410" y="410" width="44" height="60" rx="6" fill="#b98552"/>
+  <path d="M432 410 q-28-44 -12-84 q24 32 12 84 q28-40 44-72 q-4 42 -44 72z" fill="#6f9a58"/>
+  <text x="400" y="565" font-family="Montserrat, sans-serif" font-size="22" font-weight="600" fill="#7c5030" text-anchor="middle" opacity="0.55">Örnek Görsel · 1+1 Daire</text>
+</svg>
