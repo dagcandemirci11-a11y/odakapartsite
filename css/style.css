@@ -403,7 +403,11 @@ p { color: var(--color-text-muted); }
   align-items: center;
   padding-top: var(--header-height);
   padding-bottom: 140px; /* booking bar için yer */
-  overflow: hidden;
+  /* DİKKAT: overflow'u 'hidden' YAPMA. Booking bar (.booking-bar-wrap) bilinçli
+     olarak hero'nun alt kenarından translateY(50%) ile aşağı sarkar; overflow
+     gizlenirse barın alt yarısı (tarih değerleri dahil) kırpılır. Arka plan
+     zaten .hero-media (inset:0) ile sınırlı olduğu için gizlemeye gerek yok. */
+  overflow: visible;
   isolation: isolate;
 }
 
@@ -506,36 +510,6 @@ p { color: var(--color-text-muted); }
 }
 
 /* Scroll indikatörü */
-.scroll-indicator {
-  position: absolute;
-  left: 50%;
-  bottom: 170px;
-  transform: translateX(-50%);
-  width: 26px;
-  height: 42px;
-  border: 2px solid rgba(248, 243, 234, 0.6);
-  border-radius: 20px;
-  z-index: 2;
-}
-
-.scroll-indicator span {
-  position: absolute;
-  top: 7px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 8px;
-  border-radius: 2px;
-  background-color: var(--color-wood-light);
-  animation: scrollDot 1.8s ease infinite;
-}
-
-@keyframes scrollDot {
-  0% { opacity: 1; top: 7px; }
-  70% { opacity: 0; top: 20px; }
-  100% { opacity: 0; top: 20px; }
-}
-
 /* =========================================================
    10. BOOKING BAR
    ========================================================= */
@@ -652,7 +626,6 @@ p { color: var(--color-text-muted); }
   .booking-field { min-width: 42%; }
   .booking-divider { display: none; }
   .booking-submit { width: 100%; margin-top: 6px; }
-  .scroll-indicator { display: none; }
 }
 
 @media (max-width: 640px) {

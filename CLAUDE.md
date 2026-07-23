@@ -29,6 +29,8 @@ Bu depoda önizleme, tarayıcı **statik snapshot** olarak yüklendiği için CS
 
 **Booking bar gerçek rezervasyon yapmaz** — formu WhatsApp mesajına çevirip açar. Backend yok.
 
+**Booking bar konumlandırma tuzağı (regresyon uyarısı).** `.booking-bar-wrap`, `.hero`'nun çocuğudur ve `transform: translateY(50%)` ile hero'nun alt kenarından aşağı sarkar (bir sonraki bölüm bu taşma için `padding-top` ile yer ayırır). Bu yüzden **`.hero` üzerinde asla `overflow: hidden` kullanma** — barın alt yarısı (tarih değerleri dahil) kırpılır, "gg.aa.yyyy görünmüyor" bug'ı geri gelir. Arka plan zaten `.hero-media` (inset:0) ile sınırlıdır. Tarih alanları `type="text"` başlar, odakta `type="date"`'e döner (placeholder her tarayıcıda görünsün diye).
+
 ## İçerik durumu (placeholder'lar)
 
 Yayına almadan gerçeğiyle değiştirilecekler: oda/hikaye fotoğrafları (şu an SVG çizim), Google puanı (`4.2`), harita iğnesi (adrese göre embed), Facebook linki (`#`). Instagram bağlı. Oda dökümü toplam **27** (9 tip, kat kat gruplu) — bu toplamı bozacak değişikliklerde dikkatli ol.
