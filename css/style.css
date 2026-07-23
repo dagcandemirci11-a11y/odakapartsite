@@ -1261,6 +1261,11 @@ p { color: var(--color-text-muted); }
   gap: 26px;
 }
 
+/* Yorum sayısı tekse son kart tam genişliğe yayılsın (yalnız kalmasın) */
+.reviews-grid .review-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .review-card {
   background-color: var(--color-cream-light);
   border: 1px solid var(--color-border);
