@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.amenity-card', '.review-card', '.rating-badge',
     '.location-info', '.location-map', '.rooms-info-band',
     '.distance-list li', '.location-address',
-    '.story-media', '.story-content'
+    '.story-media', '.story-content', '.faq-item'
   ];
   const revealEls = document.querySelectorAll(revealSelectors.join(','));
 
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // -------------------------------------------------------
   // Aktif menü vurgusu (kaydırdıkça bulunduğun bölüm)
   // -------------------------------------------------------
-  const sections = ['hikaye', 'daireler', 'hizmetler', 'konum', 'iletisim']
+  const sections = ['hikaye', 'daireler', 'hizmetler', 'konum', 'sss', 'iletisim']
     .map(id => document.getElementById(id))
     .filter(Boolean);
 
