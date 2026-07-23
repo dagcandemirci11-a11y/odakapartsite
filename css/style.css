@@ -705,42 +705,12 @@ p { color: var(--color-text-muted); }
 
 .story-content p strong { color: var(--color-text-main); font-weight: 600; }
 
-.story-points {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 26px 0;
-}
-
-.story-points li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.98rem;
-  color: var(--color-text-main);
-  font-weight: 500;
-}
-
-.story-check {
-  flex-shrink: 0;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: var(--color-cream-dark);
-  color: var(--color-wood-dark);
-  font-size: 0.8rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .story-signature {
+  margin-top: 22px;
   font-family: var(--font-heading);
   font-weight: 600;
   color: var(--color-wood-dark) !important;
   font-size: 1.05rem !important;
-  margin-top: 4px;
 }
 
 @media (max-width: 860px) {
@@ -1249,6 +1219,14 @@ p { color: var(--color-text-muted); }
 
 .stars { color: #e0a530; letter-spacing: 2px; font-size: 0.95rem; }
 .star-empty { color: rgba(44, 38, 32, 0.22); }
+
+/* Yarım yıldız: solu dolu, sağı soluk (4.5 görünümü) */
+.star-half {
+  background: linear-gradient(90deg, #e0a530 50%, rgba(44, 38, 32, 0.22) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 .rating-meta {
   display: flex;
