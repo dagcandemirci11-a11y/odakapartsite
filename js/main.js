@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const checkout = formatTr(checkoutInput.value);
       const guests = guestsSelect.value;
 
-      const message = `Merhaba, Odak Apart Otel'de müsaitlik sormak istiyorum.%0AGiriş: ${checkin}%0AÇıkış: ${checkout}%0AKişi Sayısı: ${guests}`;
-      window.open(`https://wa.me/905307207171?text=${message}`, '_blank', 'noopener');
+      const message = `Merhaba, Odak Apart Otel'de müsaitlik sormak istiyorum.\nGiriş: ${checkin}\nÇıkış: ${checkout}\nKişi Sayısı: ${guests}`;
+      window.open(`https://wa.me/905307207171?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
     });
   }
 
@@ -302,8 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
     elSubmit.addEventListener('click', () => {
       const nights = nightsBetween();
       if (nights <= 0) return;
-      const msg = `Merhaba, Odak Apart Otel'de rezervasyon yapmak istiyorum.%0ADaire: ${roomName}%0AGiriş: ${trDate(inCheckin.value)}%0AÇıkış: ${trDate(inCheckout.value)}%0AGece: ${nights}%0AKişi Sayısı: ${inGuests.value}`;
-      window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank', 'noopener');
+      const msg = `Merhaba, Odak Apart Otel'de rezervasyon yapmak istiyorum.\nDaire: ${roomName}\nGiriş: ${trDate(inCheckin.value)}\nÇıkış: ${trDate(inCheckout.value)}\nGece: ${nights}\nKişi Sayısı: ${inGuests.value}`;
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
 
     // Kart butonlarını bağla
