@@ -1663,3 +1663,204 @@ p { color: var(--color-text-muted); }
   .hero-cta-group { flex-direction: column; }
   .hero-cta-group .btn { width: 100%; }
 }
+
+/* =========================================================
+   19. İNDİRİM ROZETİ (Promo Pill)
+   ========================================================= */
+.promo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 11px 20px;
+  border-radius: 40px;
+  background-color: var(--color-cream-light);
+  border: 1px solid var(--color-wood-light);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.92rem;
+  color: var(--color-text-main);
+}
+.promo-pill svg { width: 20px; height: 20px; stroke: var(--color-wood-dark); flex-shrink: 0; }
+.promo-pill strong { color: var(--color-wood-dark); font-weight: 700; }
+
+/* =========================================================
+   20. REZERVASYON MODALI
+   ========================================================= */
+.reserve-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.reserve-modal[hidden] { display: none; }
+
+.reserve-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(20, 31, 42, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  animation: reserveFade 0.25s ease;
+}
+
+.reserve-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background-color: var(--color-cream-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 34px 32px 30px;
+  animation: reservePop 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes reserveFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes reservePop { from { opacity: 0; transform: translateY(20px) scale(0.97); } to { opacity: 1; transform: none; } }
+
+.reserve-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition);
+}
+.reserve-close:hover { background-color: var(--color-wood-light); }
+.reserve-close svg { width: 18px; height: 18px; stroke: var(--color-navy); }
+
+.reserve-eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-wood-dark);
+  margin-bottom: 6px;
+}
+
+.reserve-room { font-size: 1.4rem; margin-bottom: 4px; }
+
+.reserve-nightly {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 22px;
+}
+.reserve-nightly strong { font-family: var(--font-heading); font-size: 1.15rem; color: var(--color-wood-dark); }
+
+.reserve-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.reserve-field:last-child { grid-column: 1 / -1; }
+
+.reserve-field label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-wood-dark);
+  margin-bottom: 6px;
+}
+
+.reserve-field input,
+.reserve-field select {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-navy);
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  cursor: pointer;
+}
+.reserve-field input:focus,
+.reserve-field select:focus {
+  outline: none;
+  border-color: var(--color-wood);
+}
+.reserve-field input::placeholder { color: var(--color-navy); opacity: 0.7; }
+.reserve-field select { appearance: none; -webkit-appearance: none; }
+
+/* Fiyat özeti */
+.reserve-summary {
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+.reserve-summary-row,
+.reserve-discount,
+.reserve-summary-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.reserve-summary-row {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  padding-bottom: 12px;
+}
+.reserve-discount {
+  font-size: 0.9rem;
+  color: #2e7d52;
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+.reserve-summary-total {
+  border-top: 1px solid var(--color-border);
+  padding-top: 12px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-navy);
+}
+.reserve-total-values { display: flex; align-items: baseline; gap: 8px; }
+.reserve-total-values s { color: var(--color-text-muted); font-weight: 400; font-size: 0.9rem; }
+.reserve-total-values strong { font-size: 1.35rem; color: var(--color-wood-dark); }
+
+.reserve-promo-hint {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: #2e7d52;
+  text-align: center;
+  font-weight: 500;
+}
+
+.reserve-submit { width: 100%; }
+.reserve-submit svg { width: 18px; height: 18px; stroke: currentColor; }
+.reserve-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.reserve-note {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reserve-overlay, .reserve-dialog { animation: none; }
+}
+
+@media (max-width: 440px) {
+  .reserve-dialog { padding: 30px 22px 26px; }
+  .reserve-fields { grid-template-columns: 1fr; }
+}
