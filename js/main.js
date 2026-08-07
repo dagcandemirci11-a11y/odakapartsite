@@ -302,7 +302,16 @@ document.addEventListener('DOMContentLoaded', () => {
     elSubmit.addEventListener('click', () => {
       const nights = nightsBetween();
       if (nights <= 0) return;
-      const msg = `Merhaba, Odak Apart Otel'de rezervasyon yapmak istiyorum.\nDaire: ${roomName}\nGiriş: ${trDate(inCheckin.value)}\nÇıkış: ${trDate(inCheckout.value)}\nGece: ${nights}\nKişi Sayısı: ${inGuests.value}`;
+
+      const base = nights * nightlyPrice;
+      const hasDiscount = nights >= DISCOUNT_MIN_NIGHTS;
+      const total = hasDiscount ? Math.round(base * (1 - DISCOUNT_RATE)) : base;
+
+      const priceLine = hasDiscount
+        ? `Toplam Fiyat: ${fmt(total)} (%10 uzun konaklama indirimli, normali ${fmt(base)})`
+        : `Toplam Fiyat: ${fmt(total)}`;
+
+      const msg = `Merhaba, Odak Apart Otel'de rezervasyon yapmak istiyorum.\nDaire: ${roomName}\nGiriş: ${trDate(inCheckin.value)}\nÇıkış: ${trDate(inCheckout.value)}\nGece: ${nights}\nKişi Sayısı: ${inGuests.value}\n${priceLine}`;
       window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
 

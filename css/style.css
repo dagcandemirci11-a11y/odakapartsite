@@ -1409,6 +1409,14 @@ p { color: var(--color-text-muted); }
   max-width: 62ch;
 }
 
+.faq-answer p a {
+  color: var(--color-wood-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.faq-answer p a:hover { color: var(--color-navy); }
+
 /* Açılışta yumuşak beliriş */
 @media (prefers-reduced-motion: no-preference) {
   .faq-item[open] .faq-answer {
