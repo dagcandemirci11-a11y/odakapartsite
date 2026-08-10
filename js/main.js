@@ -327,4 +327,25 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.querySelectorAll('[data-reserve-close]').forEach((el) => el.addEventListener('click', closeModal));
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
   }
+
+  // -------------------------------------------------------
+  // Oda galerileri: kaydırınca aktif nokta güncellensin
+  // (ayrı sekme/lightbox yok, sadece parmak/fare ile kaydırma)
+  // -------------------------------------------------------
+  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+    const track = gallery.querySelector('.room-gallery-track');
+    const dots = gallery.querySelectorAll('.room-gallery-dots span');
+    if (!track || !dots.length) return;
+
+    let ticking = false;
+    track.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const index = Math.round(track.scrollLeft / track.clientWidth);
+        dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+        ticking = false;
+      });
+    }, { passive: true });
+  });
 });
