@@ -36,7 +36,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23a97a50'/%3E%3Ctext x='32' y='42' font-family='Segoe UI,sans-serif' font-size='28' font-weight='700' fill='%23f8f3ea' text-anchor='middle'%3EOA%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="css/style.css?v=27">
+<link rel="stylesheet" href="css/style.css?v=35">
 
 <!-- Google'ın oteli tanıması için yapısal veri (Schema.org) -->
 <script type="application/ld+json">
@@ -82,7 +82,7 @@
   <div class="container">
 
     <a href="#hero" class="logo">
-      <span class="logo-mark">OA</span>
+      <span class="logo-mark logo-mark-photo" role="img" aria-label="Odak Apart Otel tabelası"></span>
       <span class="logo-text">
         <span class="name">Odak Apart Otel</span>
         <span class="tagline">İkinci Eviniz</span>
@@ -121,8 +121,7 @@
 <main>
   <section id="hero" class="hero">
 
-    <!-- Arka plan: Gerçek otel fotoğrafı geldiğinde .hero-media için
-         CSS'te "background-image: url('../assets/images/hero.jpg')" satırını eklemeniz yeterli. -->
+    <!-- Arka plan fotoğrafı: css/style.css içinde .hero-media kuralında (hero.jpg) -->
     <div class="hero-media" aria-hidden="true">
       <div class="hero-media-overlay"></div>
     </div>
@@ -184,7 +183,7 @@
 
       <div class="story-media">
         <div class="story-frame">
-          <img src="assets/images/story.svg" alt="Odak Apart Otel bahçe ve teras atmosferi">
+          <img src="assets/images/story-kahvalti.jpg" alt="Odak Apart Otel — aile sıcaklığında kahvaltı masası">
         </div>
         <div class="story-badge">
           <strong>30+</strong>
@@ -612,6 +611,33 @@
     </div>
   </section>
 
+  <!-- ========== ATMOSFERDEN KARELER (Editoryal Mozaik) ========== -->
+  <section id="atmosfer" class="section section-atmosphere">
+    <div class="container">
+      <div class="section-header">
+        <h2>Odak'ta Bir Gün</h2>
+      </div>
+
+      <div class="mosaic-grid">
+        <figure class="mosaic-item mosaic-item-large">
+          <img class="mosaic-crop-top" src="assets/images/atmosfer-merdiven.jpg" alt="Otelin sevimli merdiveni" loading="lazy">
+        </figure>
+        <figure class="mosaic-item">
+          <img src="assets/images/atmosfer-okey.jpg" alt="Genç misafirler terasta okey oynuyor" loading="lazy">
+        </figure>
+        <figure class="mosaic-item">
+          <img src="assets/images/atmosfer-teras.jpg" alt="Otelin terası" loading="lazy">
+        </figure>
+        <figure class="mosaic-item">
+          <img src="assets/images/atmosfer-deniz.jpg" alt="Yakın deniz manzarası" loading="lazy">
+        </figure>
+        <figure class="mosaic-item">
+          <img src="assets/images/atmosfer-kahvalti.jpg" alt="Sıcak bir sofra keyfi" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== OLANAKLAR (Amenities) ========== -->
   <section id="hizmetler" class="section section-amenities">
     <div class="container">
@@ -675,8 +701,8 @@
           <div class="amenity-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9Z"/><path d="M12 22c-4.97 0-9-4.03-9-9 4.97 0 9 4.03 9 9Z"/><path d="M12 22V8"/><path d="M12 8a4 4 0 1 0 0-6 4 4 0 0 0 0 6Z"/></svg>
           </div>
-          <h3>Bahçe &amp; Masa Tenisi</h3>
-          <p>Zemin katta tatlı bir bahçe ve masa tenisiyle keyifli vakit geçirin.</p>
+          <h3>Oyun &amp; Bahçe Keyfi</h3>
+          <p>Tatlı bahçemizde masa tenisi, okey ve tavla ile keyifli vakit geçirin.</p>
         </div>
 
         <div class="amenity-card">
@@ -750,14 +776,19 @@
           <a href="https://www.google.com/maps/search/?api=1&query=Alt%C4%B1nova+Mah.+Anafartalar+Cad.+No%3A136+Ayval%C4%B1k+Bal%C4%B1kesir" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Yol Tarifi Al →</a>
         </div>
 
-        <div class="location-map">
-          <iframe
-            title="Odak Apart Otel Konumu"
-            src="https://maps.google.com/maps?q=Alt%C4%B1nova%20Mah.%20Anafartalar%20Cad.%20No%3A136%20Ayval%C4%B1k%20Bal%C4%B1kesir&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen>
-          </iframe>
+        <div class="location-map-wrap">
+          <div class="location-map">
+            <iframe
+              title="Odak Apart Otel Konumu"
+              src="https://maps.google.com/maps?q=Alt%C4%B1nova%20Mah.%20Anafartalar%20Cad.%20No%3A136%20Ayval%C4%B1k%20Bal%C4%B1kesir&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="location-photo">
+            <img src="assets/images/giris.jpg" alt="Odak Apart Otel — giriş tabelası">
+          </div>
         </div>
 
       </div>
@@ -934,36 +965,6 @@
 
         <details class="faq-item" name="faq">
           <summary>
-            <span>İnternet (Wi-Fi) var mı?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </summary>
-          <div class="faq-answer">
-            <p>Evet, tüm dairelerimizde ve ortak alanlarda ücretsiz Wi-Fi mevcuttur.</p>
-          </div>
-        </details>
-
-        <details class="faq-item" name="faq">
-          <summary>
-            <span>Denize ne kadar mesafedesiniz?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </summary>
-          <div class="faq-answer">
-            <p>Denize yalnızca 400 metre — yürüyerek yaklaşık 5 dakika. Sarımsaklı Plajı 15 dakika, Cunda Adası ise 40 dakika mesafededir.</p>
-          </div>
-        </details>
-
-        <details class="faq-item" name="faq">
-          <summary>
-            <span>Dairelerde hangi olanaklar var?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </summary>
-          <div class="faq-answer">
-            <p>Tüm dairelerimizde klima, televizyon, ocak ve mutfak malzemeleri bulunur. Çatı katında ortak kullanıma açık çamaşır makinesi; zemin katta bahçe, teras ve masa tenisi mevcuttur.</p>
-          </div>
-        </details>
-
-        <details class="faq-item" name="faq">
-          <summary>
             <span>Rezervasyonu nasıl yapabilirim?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
@@ -998,7 +999,7 @@
 
     <div class="footer-col footer-brand">
       <a href="#hero" class="logo">
-        <span class="logo-mark">OA</span>
+        <span class="logo-mark logo-mark-photo" role="img" aria-label="Odak Apart Otel tabelası"></span>
         <span class="logo-text">
           <span class="name" style="color:var(--color-text-inverse)">Odak Apart Otel</span>
           <span class="tagline">İkinci Eviniz</span>
@@ -1128,6 +1129,6 @@
   </div>
 </div>
 
-<script src="js/main.js?v=26"></script>
+<script src="js/main.js?v=32"></script>
 </body>
 </html>

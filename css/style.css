@@ -230,6 +230,20 @@ p { color: var(--color-text-muted); }
   flex-shrink: 0;
 }
 
+/* DENEME: gerçek tabela fotoğrafından kırpılmış logo (giris.jpg).
+   710x893 fotoğrafta tabela alanı ~x:60-460 y:490-595; 150x40 kutuya
+   ölçeklenip o bölge öne getiriliyor. Beğenilmezse .logo-mark-photo'yu
+   kaldırıp orijinal daireye (üstteki kural) dönülebilir. */
+.logo-mark.logo-mark-photo {
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--color-navy) url('../assets/images/giris.jpg') no-repeat;
+  background-position: -22px -184px;
+  background-size: 266px 335px;
+  box-shadow: var(--shadow-sm);
+}
+
 .logo-text {
   display: flex;
   flex-direction: column;
@@ -420,11 +434,11 @@ p { color: var(--color-text-muted); }
   position: absolute;
   inset: 0;
   z-index: -2;
-  background:
-    radial-gradient(ellipse 70% 55% at 18% 12%, rgba(201, 166, 120, 0.42), transparent 62%),
-    radial-gradient(ellipse 75% 60% at 88% 90%, rgba(124, 80, 48, 0.50), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 60% 40%, rgba(44, 66, 86, 0.35), transparent 70%),
-    linear-gradient(155deg, #2f4152 0%, #1c2b3a 48%, #33261d 100%);
+  background-image:
+    radial-gradient(ellipse 70% 55% at 18% 12%, rgba(201, 166, 120, 0.32), transparent 62%),
+    radial-gradient(ellipse 75% 60% at 88% 90%, rgba(124, 80, 48, 0.38), transparent 60%),
+    linear-gradient(155deg, rgba(47,65,82,0.5) 0%, rgba(28,43,58,0.28) 48%, rgba(51,38,29,0.5) 100%),
+    url('../assets/images/hero.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -1086,6 +1100,60 @@ p { color: var(--color-text-muted); }
 }
 
 /* =========================================================
+   12b. ATMOSFERDEN KARELER (Editoryal Mozaik)
+   ========================================================= */
+.section-atmosphere {
+  background-color: var(--color-cream);
+}
+
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 14px;
+  aspect-ratio: 16 / 7;
+}
+
+.mosaic-item {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.mosaic-item-large {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.mosaic-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.mosaic-item:hover img { transform: scale(1.06); }
+
+/* Kadrajın üst kısmına ağırlık ver — kişilerin başının kesilmemesi için */
+.mosaic-crop-top { object-position: center 15%; }
+
+@media (max-width: 760px) {
+  .mosaic-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 220px repeat(2, 150px);
+    aspect-ratio: auto;
+  }
+  .mosaic-item-large { grid-column: 1 / 3; grid-row: 1; }
+}
+
+@media (max-width: 420px) {
+  .mosaic-grid { grid-template-rows: 200px repeat(2, 130px); gap: 10px; }
+}
+
+/* =========================================================
    13. OLANAKLAR (Amenities)
    ========================================================= */
 .section-amenities {
@@ -1241,6 +1309,11 @@ p { color: var(--color-text-muted); }
   line-height: 1.5;
 }
 
+.location-map-wrap {
+  position: relative;
+  height: 100%;
+}
+
 .location-map {
   height: 100%;
   min-height: 440px;
@@ -1249,6 +1322,31 @@ p { color: var(--color-text-muted); }
   box-shadow: var(--shadow-md);
   border: 4px solid var(--color-cream-light);
 }
+
+/* Haritanın köşesine oturan "giriş" fotoğrafı (polaroid) */
+.location-photo {
+  position: absolute;
+  left: -20px;
+  bottom: -24px;
+  width: 148px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 5px solid var(--color-cream-light);
+  box-shadow: var(--shadow-lg);
+  transform: rotate(-4deg);
+  z-index: 3;
+  transition: transform var(--transition);
+}
+
+.location-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 85%;
+  display: block;
+}
+
+.location-photo:hover { transform: rotate(-1deg) scale(1.04); }
 
 .location-map iframe {
   width: 100%;
@@ -1264,7 +1362,9 @@ p { color: var(--color-text-muted); }
     grid-template-columns: 1fr;
     gap: 36px;
   }
-  .location-map { min-height: 340px; order: 2; }
+  .location-map { min-height: 340px; }
+  .location-map-wrap { order: 2; }
+  .location-photo { left: 12px; bottom: -20px; width: 110px; }
 }
 
 /* =========================================================

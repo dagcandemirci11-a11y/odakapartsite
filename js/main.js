@@ -109,9 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealSelectors = [
     '.section-header', '.rooms-floor-title', '.room-card',
     '.amenity-card', '.review-card', '.rating-badge',
-    '.location-info', '.location-map', '.rooms-info-band',
+    '.location-info', '.location-map-wrap',
     '.distance-list li', '.location-address',
-    '.story-media', '.story-content', '.faq-item'
+    '.story-media', '.story-content', '.faq-item', '.mosaic-item'
   ];
   const revealEls = document.querySelectorAll(revealSelectors.join(','));
 
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => el.classList.add('reveal'));
 
     // Aynı grup içindeki kartlara kademeli gecikme (stagger)
-    document.querySelectorAll('.rooms-grid, .amenities-grid, .reviews-grid').forEach(group => {
+    document.querySelectorAll('.rooms-grid, .amenities-grid, .reviews-grid, .mosaic-grid').forEach(group => {
       [...group.children].forEach((child, i) => {
         if (child.classList.contains('reveal')) {
           child.style.transitionDelay = (i % 3) * 0.09 + 's';
