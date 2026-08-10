@@ -36,7 +36,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23a97a50'/%3E%3Ctext x='32' y='42' font-family='Segoe UI,sans-serif' font-size='28' font-weight='700' fill='%23f8f3ea' text-anchor='middle'%3EOA%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="css/style.css?v=26">
+<link rel="stylesheet" href="css/style.css?v=27">
 
 <!-- Google'ın oteli tanıması için yapısal veri (Schema.org) -->
 <script type="application/ld+json">
@@ -262,8 +262,21 @@
 
         <!-- Zemin Kat 1+1 (2) -->
         <article class="room-card">
-          <div class="room-media">
-            <img src="assets/images/room-suite.svg" alt="Zemin kat 1+1 daire">
+          <div class="room-media room-gallery" data-gallery>
+            <div class="room-gallery-track">
+              <img src="assets/images/room-1-1-oturma.jpg" alt="Zemin kat 1+1 daire — oturma alanı" loading="lazy">
+              <img src="assets/images/room-1-1-banyo.jpg" alt="Zemin kat 1+1 daire — banyo" loading="lazy">
+              <img src="assets/images/room-1-1-yatak.jpg" alt="Zemin kat 1+1 daire — yatak odası" loading="lazy">
+            </div>
+            <button type="button" class="room-gallery-arrow room-gallery-prev" aria-label="Önceki fotoğraf" data-dir="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button type="button" class="room-gallery-arrow room-gallery-next" aria-label="Sonraki fotoğraf" data-dir="1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <div class="room-gallery-dots" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span>
+            </div>
           </div>
           <div class="room-body">
             <div class="room-head">
@@ -335,8 +348,21 @@
 
         <!-- 1. Kat 1+1 Balkonlu (6) -->
         <article class="room-card">
-          <div class="room-media">
-            <img src="assets/images/room-suite.svg" alt="Birinci kat 1+1 balkonlu daire">
+          <div class="room-media room-gallery" data-gallery>
+            <div class="room-gallery-track">
+              <img src="assets/images/room-1-1-oturma.jpg" alt="1. kat 1+1 balkonlu daire — oturma alanı" loading="lazy">
+              <img src="assets/images/room-1-1-banyo.jpg" alt="1. kat 1+1 balkonlu daire — banyo" loading="lazy">
+              <img src="assets/images/room-1-1-yatak.jpg" alt="1. kat 1+1 balkonlu daire — yatak odası" loading="lazy">
+            </div>
+            <button type="button" class="room-gallery-arrow room-gallery-prev" aria-label="Önceki fotoğraf" data-dir="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button type="button" class="room-gallery-arrow room-gallery-next" aria-label="Sonraki fotoğraf" data-dir="1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <div class="room-gallery-dots" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span>
+            </div>
             <span class="room-badge room-badge-wood">Balkonlu</span>
           </div>
           <div class="room-body">
@@ -363,8 +389,21 @@
 
         <!-- 1. Kat 1+1 Balkonsuz (2) -->
         <article class="room-card">
-          <div class="room-media">
-            <img src="assets/images/room-suite.svg" alt="Birinci kat 1+1 balkonsuz daire">
+          <div class="room-media room-gallery" data-gallery>
+            <div class="room-gallery-track">
+              <img src="assets/images/room-1-1-oturma.jpg" alt="1. kat 1+1 daire — oturma alanı" loading="lazy">
+              <img src="assets/images/room-1-1-banyo.jpg" alt="1. kat 1+1 daire — banyo" loading="lazy">
+              <img src="assets/images/room-1-1-yatak.jpg" alt="1. kat 1+1 daire — yatak odası" loading="lazy">
+            </div>
+            <button type="button" class="room-gallery-arrow room-gallery-prev" aria-label="Önceki fotoğraf" data-dir="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button type="button" class="room-gallery-arrow room-gallery-next" aria-label="Sonraki fotoğraf" data-dir="1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <div class="room-gallery-dots" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span>
+            </div>
           </div>
           <div class="room-body">
             <div class="room-head">
@@ -436,8 +475,21 @@
 
         <!-- 2. Kat 1+1 Balkonlu (6) -->
         <article class="room-card">
-          <div class="room-media">
-            <img src="assets/images/room-suite.svg" alt="İkinci kat 1+1 balkonlu daire">
+          <div class="room-media room-gallery" data-gallery>
+            <div class="room-gallery-track">
+              <img src="assets/images/room-1-1-oturma.jpg" alt="2. kat 1+1 balkonlu daire — oturma alanı" loading="lazy">
+              <img src="assets/images/room-1-1-banyo.jpg" alt="2. kat 1+1 balkonlu daire — banyo" loading="lazy">
+              <img src="assets/images/room-1-1-yatak.jpg" alt="2. kat 1+1 balkonlu daire — yatak odası" loading="lazy">
+            </div>
+            <button type="button" class="room-gallery-arrow room-gallery-prev" aria-label="Önceki fotoğraf" data-dir="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button type="button" class="room-gallery-arrow room-gallery-next" aria-label="Sonraki fotoğraf" data-dir="1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <div class="room-gallery-dots" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span>
+            </div>
           </div>
           <div class="room-body">
             <div class="room-head">
@@ -463,8 +515,21 @@
 
         <!-- 2. Kat 1+1 Balkonsuz (2) -->
         <article class="room-card">
-          <div class="room-media">
-            <img src="assets/images/room-suite.svg" alt="İkinci kat 1+1 balkonsuz daire">
+          <div class="room-media room-gallery" data-gallery>
+            <div class="room-gallery-track">
+              <img src="assets/images/room-1-1-oturma.jpg" alt="2. kat 1+1 daire — oturma alanı" loading="lazy">
+              <img src="assets/images/room-1-1-banyo.jpg" alt="2. kat 1+1 daire — banyo" loading="lazy">
+              <img src="assets/images/room-1-1-yatak.jpg" alt="2. kat 1+1 daire — yatak odası" loading="lazy">
+            </div>
+            <button type="button" class="room-gallery-arrow room-gallery-prev" aria-label="Önceki fotoğraf" data-dir="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button type="button" class="room-gallery-arrow room-gallery-next" aria-label="Sonraki fotoğraf" data-dir="1">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <div class="room-gallery-dots" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span>
+            </div>
           </div>
           <div class="room-body">
             <div class="room-head">
