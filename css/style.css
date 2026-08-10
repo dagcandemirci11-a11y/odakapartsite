@@ -833,6 +833,47 @@ p { color: var(--color-text-muted); }
 /* Galeride hover-yakınlaşma kapalı: kaydırma sırasında görsel titremesin */
 .room-card:hover .room-gallery-track img { transform: none; }
 
+/* Kaydırma okları — kaydırmayı daha akıcı/net hissettirir */
+.room-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(20, 31, 42, 0.42);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity var(--transition), background-color var(--transition), transform var(--transition);
+}
+.room-gallery-prev { left: 10px; }
+.room-gallery-next { right: 10px; }
+
+.room-gallery-arrow svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-text-inverse);
+}
+
+.room-gallery-arrow:hover { background-color: rgba(20, 31, 42, 0.65); }
+
+/* Masaüstünde karta gelince belir; dokunmatikte her zaman görünsün */
+.room-card:hover .room-gallery-arrow { opacity: 1; }
+
+.room-gallery-arrow.is-disabled {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+@media (hover: none) {
+  .room-gallery-arrow { opacity: 1; background-color: rgba(20, 31, 42, 0.3); }
+}
+
 .room-gallery-dots {
   position: absolute;
   left: 0;

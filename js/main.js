@@ -335,17 +335,31 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-gallery]').forEach((gallery) => {
     const track = gallery.querySelector('.room-gallery-track');
     const dots = gallery.querySelectorAll('.room-gallery-dots span');
+    const prevBtn = gallery.querySelector('.room-gallery-prev');
+    const nextBtn = gallery.querySelector('.room-gallery-next');
     if (!track || !dots.length) return;
+
+    const updateUI = () => {
+      const index = Math.round(track.scrollLeft / track.clientWidth);
+      dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+      if (prevBtn) prevBtn.classList.toggle('is-disabled', index === 0);
+      if (nextBtn) nextBtn.classList.toggle('is-disabled', index === dots.length - 1);
+    };
 
     let ticking = false;
     track.addEventListener('scroll', () => {
       if (ticking) return;
       ticking = true;
-      requestAnimationFrame(() => {
-        const index = Math.round(track.scrollLeft / track.clientWidth);
-        dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
-        ticking = false;
-      });
+      requestAnimationFrame(() => { updateUI(); ticking = false; });
     }, { passive: true });
+
+    [prevBtn, nextBtn].forEach((btn) => {
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        track.scrollBy({ left: track.clientWidth * Number(btn.dataset.dir), behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
+    });
+
+    updateUI();
   });
 });

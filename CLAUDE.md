@@ -31,6 +31,8 @@ Bu depoda önizleme, tarayıcı **statik snapshot** olarak yüklendiği için CS
 
 **Booking bar konumlandırma tuzağı (regresyon uyarısı).** `.booking-bar-wrap`, `.hero`'nun çocuğudur ve `transform: translateY(50%)` ile hero'nun alt kenarından aşağı sarkar (bir sonraki bölüm bu taşma için `padding-top` ile yer ayırır). Bu yüzden **`.hero` üzerinde asla `overflow: hidden` kullanma** — barın alt yarısı (tarih değerleri dahil) kırpılır, "gg.aa.yyyy görünmüyor" bug'ı geri gelir. Arka plan zaten `.hero-media` (inset:0) ile sınırlıdır. Tarih alanları `type="text"` başlar, odakta `type="date"`'e döner (placeholder her tarayıcıda görünsün diye).
 
+**Oda galerisi fotoğraf sırası kuralı.** Bir oda kartına gerçek fotoğraf galerisi eklerken (`.room-gallery`, `data-gallery`), **ilk fotoğraf her zaman oturma/salon alanı** olmalı — bu, kullanıcının bilinçli tercihi (1+0 dairelerde uygulandı: oturma → mutfak → yatak). Yeni oda tiplerine fotoğraf eklerken bu sırayı koru.
+
 ## İçerik durumu (placeholder'lar)
 
 Yayına almadan gerçeğiyle değiştirilecekler: oda/hikaye fotoğrafları (şu an SVG çizim), Google puanı (`4.2`), harita iğnesi (adrese göre embed), Facebook linki (`#`). Instagram bağlı. Oda dökümü toplam **27** (9 tip, kat kat gruplu) — bu toplamı bozacak değişikliklerde dikkatli ol.
