@@ -362,4 +362,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateUI();
   });
+
+  // -------------------------------------------------------
+  // Fotoğraf lightbox (büyütme) — .js-lightbox öğelerine uygulanır
+  // -------------------------------------------------------
+  const lightbox = document.getElementById('photoLightbox');
+  if (lightbox) {
+    const lightboxImg = document.getElementById('photoLightboxImg');
+
+    const openLightbox = (src, alt) => {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || '';
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    };
+    const closeLightbox = () => {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+      lightboxImg.src = '';
+    };
+
+    document.querySelectorAll('.js-lightbox').forEach((el) => {
+      el.addEventListener('click', () => {
+        const img = el.querySelector('img');
+        openLightbox(el.dataset.lightboxSrc, img ? img.alt : '');
+      });
+    });
+
+    lightbox.querySelectorAll('[data-lightbox-close]').forEach((el) => el.addEventListener('click', closeLightbox));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !lightbox.hidden) closeLightbox(); });
+  }
 });

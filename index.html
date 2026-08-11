@@ -36,7 +36,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23a97a50'/%3E%3Ctext x='32' y='42' font-family='Segoe UI,sans-serif' font-size='28' font-weight='700' fill='%23f8f3ea' text-anchor='middle'%3EOA%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="css/style.css?v=35">
+<link rel="stylesheet" href="css/style.css?v=40">
 
 <!-- Google'ın oteli tanıması için yapısal veri (Schema.org) -->
 <script type="application/ld+json">
@@ -77,12 +77,18 @@
 </head>
 <body>
 
+<!-- Hero fotoğrafı düşük çözünürlüklü olduğu için gerçek keskinleştirme (unsharp mask) filtresi -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="heroSharpen">
+    <feConvolveMatrix order="3" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0" preserveAlpha="true"/>
+  </filter>
+</svg>
+
 <!-- ========== HEADER & NAVİGASYON ========== -->
 <header class="site-header" id="siteHeader">
   <div class="container">
 
     <a href="#hero" class="logo">
-      <span class="logo-mark logo-mark-photo" role="img" aria-label="Odak Apart Otel tabelası"></span>
       <span class="logo-text">
         <span class="name">Odak Apart Otel</span>
         <span class="tagline">İkinci Eviniz</span>
@@ -366,6 +372,8 @@
               <img src="assets/images/room-1-1-oturma.jpg" alt="1. kat 1+1 balkonlu daire — oturma alanı" loading="lazy">
               <img src="assets/images/room-1-1-banyo.jpg" alt="1. kat 1+1 balkonlu daire — banyo" loading="lazy">
               <img src="assets/images/room-1-1-yatak.jpg" alt="1. kat 1+1 balkonlu daire — yatak odası" loading="lazy">
+              <img src="assets/images/room-1-1-balkon-1.jpg" alt="1. kat 1+1 balkonlu daire — balkon" loading="lazy">
+              <img src="assets/images/room-1-1-balkon-2.jpg" alt="1. kat 1+1 balkonlu daire — balkon manzarası" loading="lazy">
             </div>
             <button type="button" class="room-gallery-arrow room-gallery-prev" aria-label="Önceki fotoğraf" data-dir="-1">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
@@ -374,7 +382,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </button>
             <div class="room-gallery-dots" aria-hidden="true">
-              <span class="is-active"></span><span></span><span></span>
+              <span class="is-active"></span><span></span><span></span><span></span><span></span>
             </div>
             <span class="room-badge room-badge-wood">Balkonlu</span>
           </div>
@@ -493,6 +501,8 @@
               <img src="assets/images/room-1-1-oturma.jpg" alt="2. kat 1+1 balkonlu daire — oturma alanı" loading="lazy">
               <img src="assets/images/room-1-1-banyo.jpg" alt="2. kat 1+1 balkonlu daire — banyo" loading="lazy">
               <img src="assets/images/room-1-1-yatak.jpg" alt="2. kat 1+1 balkonlu daire — yatak odası" loading="lazy">
+              <img src="assets/images/room-1-1-balkon-1.jpg" alt="2. kat 1+1 balkonlu daire — balkon" loading="lazy">
+              <img src="assets/images/room-1-1-balkon-2.jpg" alt="2. kat 1+1 balkonlu daire — balkon manzarası" loading="lazy">
             </div>
             <button type="button" class="room-gallery-arrow room-gallery-prev" aria-label="Önceki fotoğraf" data-dir="-1">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
@@ -501,7 +511,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </button>
             <div class="room-gallery-dots" aria-hidden="true">
-              <span class="is-active"></span><span></span><span></span>
+              <span class="is-active"></span><span></span><span></span><span></span><span></span>
             </div>
           </div>
           <div class="room-body">
@@ -644,7 +654,6 @@
       <div class="section-header">
         <span class="eyebrow">Olanaklar &amp; Hizmetler</span>
         <h2>Evinizdeki Konfor, Tatilin Huzuru</h2>
-        <p>Kendinizi evinizde hissetmeniz için ihtiyacınız olan her şey burada. Aile işletmesi titizliğiyle hazırladık.</p>
       </div>
 
       <div class="amenities-grid">
@@ -661,24 +670,24 @@
           <div class="amenity-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
           </div>
-          <h3>Tam Donanımlı Mutfak</h3>
-          <p>Ocak ve tüm mutfak malzemeleriyle dilediğiniz gibi yemeğinizi hazırlayın.</p>
+          <h3>Mutfak Gereçleri</h3>
+          <p>Ocak ve temel mutfak gereçleriyle kendi yemeğinizi kendiniz hazırlayabilirsiniz.</p>
         </div>
 
         <div class="amenity-card">
           <div class="amenity-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3>7/24 Resepsiyon</h3>
-          <p>İhtiyacınız olan her an, güler yüzlü ekibimiz yanınızda.</p>
+          <h3>Güvenliğiniz Önceliğimiz</h3>
+          <p>Güvenlik kameraları, yangın merdiveni ve odalarda yangın dedektörleriyle huzurlu bir konaklama sağlıyoruz.</p>
         </div>
 
         <div class="amenity-card">
           <div class="amenity-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/><path d="M9 12h.01M13 12h.01"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="4" rx="1"/><rect x="4" y="10" width="16" height="4" rx="1"/><rect x="4" y="16" width="10" height="4" rx="1"/></svg>
           </div>
-          <h3>Temizlik Hizmeti</h3>
-          <p>Düzenli temizlik ile daireniz her zaman ferah ve tertemiz.</p>
+          <h3>Çarşaf &amp; Havlu</h3>
+          <p>Konaklamanız boyunca temiz çarşaf, pike ve havlu tarafımızdan sağlanır.</p>
         </div>
 
         <div class="amenity-card">
@@ -699,18 +708,18 @@
 
         <div class="amenity-card">
           <div class="amenity-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9Z"/><path d="M12 22c-4.97 0-9-4.03-9-9 4.97 0 9 4.03 9 9Z"/><path d="M12 22V8"/><path d="M12 8a4 4 0 1 0 0-6 4 4 0 0 0 0 6Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5"/><circle cx="15" cy="15" r="5"/></svg>
           </div>
-          <h3>Oyun &amp; Bahçe Keyfi</h3>
-          <p>Tatlı bahçemizde masa tenisi, okey ve tavla ile keyifli vakit geçirin.</p>
+          <h3>Oyun Keyfi</h3>
+          <p>Masa tenisi, okey ve tavla ile keyifli vakit geçirin.</p>
         </div>
 
         <div class="amenity-card">
           <div class="amenity-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/><circle cx="12" cy="9" r="1"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9Z"/><path d="M12 22c-4.97 0-9-4.03-9-9 4.97 0 9 4.03 9 9Z"/><path d="M12 22V8"/><path d="M12 8a4 4 0 1 0 0-6 4 4 0 0 0 0 6Z"/></svg>
           </div>
-          <h3>Manzaralı Teras</h3>
-          <p>Tatlı manzaralı terasımızda çayınızı yudumlayın, huzuru hissedin.</p>
+          <h3>Teras &amp; Bahçe Keyfi</h3>
+          <p>Manzaralı terasımızda mangal keyfi yapabilir, tatlı bahçemizde kendi kahvaltınızı ya da akşam yemeğinizi afiyetle yiyebilirsiniz.</p>
         </div>
 
       </div>
@@ -786,9 +795,9 @@
               allowfullscreen>
             </iframe>
           </div>
-          <div class="location-photo">
+          <button type="button" class="location-photo js-lightbox" data-lightbox-src="assets/images/giris.jpg" aria-label="Giriş fotoğrafını büyüt">
             <img src="assets/images/giris.jpg" alt="Odak Apart Otel — giriş tabelası">
-          </div>
+          </button>
         </div>
 
       </div>
@@ -803,7 +812,6 @@
         <div class="section-header reviews-header">
           <span class="eyebrow">Misafir Yorumları</span>
           <h2>Misafirlerimiz Ne Diyor?</h2>
-          <p>Ailemizin birer parçası olan sevgili misafirlerimizin yorumları.</p>
         </div>
 
         <div class="rating-badge">
@@ -949,7 +957,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="faq-answer">
-            <p>Otelimizin özel otoparkı bulunmuyor; ancak çevredeki sokaklara rahatça park edebilirsiniz.</p>
+            <p>Evet, otelimizin misafirlerimize ayrılmış bir otoparkı bulunuyor. Dilerseniz çevredeki sokaklara da rahatça park edebilirsiniz.</p>
           </div>
         </details>
 
@@ -999,8 +1007,7 @@
 
     <div class="footer-col footer-brand">
       <a href="#hero" class="logo">
-        <span class="logo-mark logo-mark-photo" role="img" aria-label="Odak Apart Otel tabelası"></span>
-        <span class="logo-text">
+          <span class="logo-text">
           <span class="name" style="color:var(--color-text-inverse)">Odak Apart Otel</span>
           <span class="tagline">İkinci Eviniz</span>
         </span>
@@ -1044,8 +1051,7 @@
 
     <div class="footer-col">
       <h4>Konum</h4>
-      <p class="footer-note">Denize 400 m · Sarımsaklı 15 dk · Cunda 40 dk</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Alt%C4%B1nova+Mah.+Anafartalar+Cad.+No%3A136+Ayval%C4%B1k+Bal%C4%B1kesir" target="_blank" rel="noopener" class="footer-map-link">Haritada Aç →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Alt%C4%B1nova+Mah.+Anafartalar+Cad.+No%3A136+Ayval%C4%B1k+Bal%C4%B1kesir" target="_blank" rel="noopener" class="footer-map-link">Google Haritalar'da Aç →</a>
     </div>
 
   </div>
@@ -1129,6 +1135,15 @@
   </div>
 </div>
 
-<script src="js/main.js?v=32"></script>
+<!-- ========== FOTOĞRAF LIGHTBOX (büyütme) ========== -->
+<div class="photo-lightbox" id="photoLightbox" hidden>
+  <div class="photo-lightbox-overlay" data-lightbox-close></div>
+  <button class="photo-lightbox-close" data-lightbox-close aria-label="Kapat">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <img src="" alt="" id="photoLightboxImg">
+</div>
+
+<script src="js/main.js?v=34"></script>
 </body>
 </html>

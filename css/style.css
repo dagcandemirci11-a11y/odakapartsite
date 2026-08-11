@@ -441,6 +441,7 @@ p { color: var(--color-text-muted); }
     url('../assets/images/hero.jpg');
   background-size: cover;
   background-position: center;
+  filter: url(#heroSharpen) contrast(1.05) saturate(1.06);
 }
 
 /* İnce doku + sinematik vinyet (köşe kararması) */
@@ -1326,16 +1327,24 @@ p { color: var(--color-text-muted); }
 /* Haritanın köşesine oturan "giriş" fotoğrafı (polaroid) */
 .location-photo {
   position: absolute;
-  left: -20px;
-  bottom: -24px;
-  width: 148px;
-  border-radius: var(--radius-sm);
+  left: -28px;
+  bottom: -34px;
+  width: 230px;
+  padding: 0;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  border: 5px solid var(--color-cream-light);
+  border: 6px solid var(--color-cream-light);
   box-shadow: var(--shadow-lg);
   transform: rotate(-4deg);
   z-index: 3;
-  transition: transform var(--transition);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.location-photo:hover,
+.location-photo:focus-visible {
+  transform: rotate(-1deg) scale(1.04);
+  box-shadow: var(--shadow-lg), 0 0 0 3px var(--color-wood-light);
 }
 
 .location-photo img {
@@ -1344,9 +1353,8 @@ p { color: var(--color-text-muted); }
   object-fit: cover;
   object-position: center 85%;
   display: block;
+  pointer-events: none;
 }
-
-.location-photo:hover { transform: rotate(-1deg) scale(1.04); }
 
 .location-map iframe {
   width: 100%;
@@ -1364,7 +1372,7 @@ p { color: var(--color-text-muted); }
   }
   .location-map { min-height: 340px; }
   .location-map-wrap { order: 2; }
-  .location-photo { left: 12px; bottom: -20px; width: 110px; }
+  .location-photo { left: 12px; bottom: -26px; width: 170px; }
 }
 
 /* =========================================================
@@ -2146,4 +2154,60 @@ p { color: var(--color-text-muted); }
 @media (max-width: 440px) {
   .reserve-dialog { padding: 30px 22px 26px; }
   .reserve-fields { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   21. FOTOĞRAF LIGHTBOX (büyütme)
+   ========================================================= */
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.photo-lightbox[hidden] { display: none; }
+
+.photo-lightbox-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15, 24, 33, 0.88);
+  animation: reserveFade 0.25s ease;
+}
+
+.photo-lightbox img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  animation: reservePop 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(248, 243, 234, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition);
+  z-index: 1;
+}
+.photo-lightbox-close:hover { background-color: rgba(248, 243, 234, 0.24); }
+.photo-lightbox-close svg { width: 20px; height: 20px; stroke: var(--color-text-inverse); }
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-lightbox-overlay, .photo-lightbox img { animation: none; }
+}
+
+@media (max-width: 560px) {
+  .photo-lightbox { padding: 20px; }
+  .photo-lightbox-close { top: 14px; right: 14px; }
 }
