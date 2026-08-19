@@ -419,11 +419,7 @@ p { color: var(--color-text-muted); }
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
-  padding-bottom: 140px; /* booking bar için yer */
-  /* DİKKAT: overflow'u 'hidden' YAPMA. Booking bar (.booking-bar-wrap) bilinçli
-     olarak hero'nun alt kenarından translateY(50%) ile aşağı sarkar; overflow
-     gizlenirse barın alt yarısı (tarih değerleri dahil) kırpılır. Arka plan
-     zaten .hero-media (inset:0) ile sınırlı olduğu için gizlemeye gerek yok. */
+  padding-bottom: 64px;
   overflow: visible;
   isolation: isolate;
 }
@@ -532,13 +528,10 @@ p { color: var(--color-text-muted); }
    10. BOOKING BAR
    ========================================================= */
 .booking-bar-wrap {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateY(50%);
+  position: relative;
   z-index: 3;
-  padding: 0 24px;
+  padding: 0 24px 56px;
+  background-color: var(--color-cream);
 }
 
 .booking-bar {
@@ -647,7 +640,6 @@ p { color: var(--color-text-muted); }
 }
 
 @media (max-width: 640px) {
-  .hero { padding-bottom: 220px; }
   .hero-stats { flex-wrap: wrap; row-gap: 18px; }
   .hero-cta-group .btn { flex: 1; text-align: center; }
   .booking-field { min-width: 100%; }
@@ -658,7 +650,6 @@ p { color: var(--color-text-muted); }
    ========================================================= */
 .section-story {
   background-color: var(--color-cream);
-  padding-top: 150px; /* booking bar taşması için */
 }
 
 .story-layout {
@@ -734,7 +725,6 @@ p { color: var(--color-text-muted); }
 @media (max-width: 860px) {
   .story-layout { grid-template-columns: 1fr; gap: 48px; }
   .story-media { max-width: 440px; margin: 0 auto; width: 100%; }
-  .section-story { padding-top: 260px; }
 }
 
 @media (max-width: 560px) {

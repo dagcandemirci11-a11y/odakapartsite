@@ -29,7 +29,7 @@ Bu depoda önizleme, tarayıcı **statik snapshot** olarak yüklendiği için CS
 
 **Booking bar gerçek rezervasyon yapmaz** — formu WhatsApp mesajına çevirip açar. Backend yok.
 
-**Booking bar konumlandırma tuzağı (regresyon uyarısı).** `.booking-bar-wrap`, `.hero`'nun çocuğudur ve `transform: translateY(50%)` ile hero'nun alt kenarından aşağı sarkar (bir sonraki bölüm bu taşma için `padding-top` ile yer ayırır). Bu yüzden **`.hero` üzerinde asla `overflow: hidden` kullanma** — barın alt yarısı (tarih değerleri dahil) kırpılır, "gg.aa.yyyy görünmüyor" bug'ı geri gelir. Arka plan zaten `.hero-media` (inset:0) ile sınırlıdır. Tarih alanları `type="text"` başlar, odakta `type="date"`'e döner (placeholder her tarayıcıda görünsün diye).
+**Booking bar artık `.hero`'nun DIŞINDA, normal akışta** (`#hero` `</section>`'ından hemen sonra, ayrı bir `<div class="booking-bar-wrap">`). Eskiden `.hero`'nun çocuğuydu ve `transform: translateY(50%)` ile alt kenardan taşırılıyordu — bu, farklı cihazlarda iki ayrı regresyona yol açtı (kırpılma, sonra üstüne binme). **Bu deseni geri getirme** — booking bar'ı tekrar `position:absolute`/`transform` ile hero'ya taşırma; normal akış kalıcı ve cihazdan bağımsız güvenli çözümdür. Tarih alanları `type="text"` başlar, odakta `type="date"`'e döner (placeholder her tarayıcıda görünsün diye).
 
 **Oda galerisi fotoğraf sırası kuralı.** Bir oda kartına gerçek fotoğraf galerisi eklerken (`.room-gallery`, `data-gallery`), **ilk fotoğraf her zaman oturma/salon alanı** olmalı — bu, kullanıcının bilinçli tercihi (1+0 dairelerde uygulandı: oturma → mutfak → yatak). Yeni oda tiplerine fotoğraf eklerken bu sırayı koru.
 
