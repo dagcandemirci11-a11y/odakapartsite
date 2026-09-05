@@ -975,6 +975,15 @@ p { color: var(--color-text-muted); }
   color: var(--color-text-muted);
 }
 
+.price-old {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
 .room-specs {
   display: grid;
   grid-template-columns: 1fr 1fr;
